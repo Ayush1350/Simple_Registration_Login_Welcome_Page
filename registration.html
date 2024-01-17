@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration.css">
+  </head>
+  <body>
+    <div class="registration">
+        <h1>Registration form</h1><br>
+        <label>Full name:</label><input type="text" id="txt1"><br>
+        <label>Username:</label><input type="text" id="txt2"><br>
+        <label>Password:</label><input type="password" id="psw"><br>
+        <label>Email:</label><input type="text" id="txt3"><br>
+
+        <div class="radio-group">
+            <lable>Gender:</lable> 
+            <input type="radio" id="rd1" name="gender">Male 
+            <input type="radio" id="rd2" name="gender">Female
+        </div>
+
+        <br>
+        
+
+        <button onclick="register()">Registration</button>
+    </div>
+    
+
+    
+  </body>
+
+  <script>
+    function register() {
+    
+    var fullName = document.getElementById('txt1').value;
+    var username = document.getElementById('txt2').value;
+    var password = document.getElementById('psw').value;
+    var email = document.getElementById('txt3').value;
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+
+   
+    sessionStorage.setItem('fullName', fullName);
+    sessionStorage.setItem('username', username);
+    sessionStorage.setItem('password', password);
+    sessionStorage.setItem('email', email);
+    sessionStorage.setItem('gender', gender);
+
+    
+    window.location.href = 'login.html';
+}
+
+  </script>
+
+</html>

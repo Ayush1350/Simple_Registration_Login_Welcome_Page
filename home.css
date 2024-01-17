@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #B4D4FF;
+}
+
+.welcome {
+    background-color: #86B6F6;
+    border: 5px dotted #176B87;
+    height: 10rem;
+    width: 20rem;
+    padding: 1rem;
+    
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+    width: 5rem;
+}
+
+
+
+
+
